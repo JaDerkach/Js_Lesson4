@@ -20,6 +20,14 @@
 
 // 3 - створити функцію яка обчислює та повертає площу циліндру висотою h, та радіутом r
 
+// function calc(a,b,c) {
+//     let result = a * b *c;
+//     return result;
+// }
+//
+// let S = calc(2, 2, 3.14)
+// console.log(S)
+
 
 // 4 - створити функцію яка приймає масив та виводить кожен його елемент!!!!
 
@@ -44,13 +52,13 @@
 // }
 // looper(users)
 // 5 - створити функцію яка створює параграф з текстом. Текст задати через аргумент; !!!!
-function writ(history) {
-    document.write(`
-  <p> ${history} </p>
-`);
-}
-
-writ('History in Octen school')
+// function writ(history) {
+//     document.write(`
+//   <p> ${history} </p>
+// `);
+// }
+//
+// writ('History in Octen school')
 
 // 6 - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий
 //   Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл)
@@ -58,69 +66,64 @@ writ('History in Octen school')
 
 // 7 - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список !!!!
 
-// let arr;
-// arr = [123, 'lorem', true]
-// function loop(value){
-// document.write(`
+// arr = [string = 1, text = 1, bool = 1]
+//
+// function loop(arr) {
+//     for (let i = 0; i < arr.length; i++) {
+//         const arrElement = arr[i];
+//         {
+//             document.write(`
 //    <ul>
-//      <li>${value}</li>
-//    </ul>
-// `)
+//      <li>${arr}</li
+//
 // }
-// loop('123')
-// loop('lorem')
-// loop('true')
+// loop()
 
 
 // 8 - створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ.
 // Для кожного об'єкту окремий блок. !!!!
-// function writer(id,name,age){
-// document.write(`
-//    <div>
-//      <p>${id} </p>
-//      <h>${name} </h>
-//      <p>${age} </p>
-//    </div>
-// `);
-// }
-// writer('id: 5','name: Ivan','age: 25');
-// writer('id: 6','name: Olga','age: 33');
-// writer('id: 44','name: Pavlo','age: 52');
-//
+
 
 //
-// // 9 - створити функцію яка повертає найменьше число з масиву
+// 9 - створити функцію яка повертає найменьше число з масиву
 //
-// // let arr = [58, 19, 25, 78]
-// // let=
-// // function numb(array) {
-// //     if (array > 26)
-// //         for (const item of array) {
-// //
-// //     }
-// // }
-// //
-// // numb(arr)
-// // console.log(arr)log
+
 
 // 10 - створити функцію sum(arr)яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад sum([1,2,10]) //->13 !!!!
 
-
-function sum() {
-    const arr = (Array.from(arguments))
-    let result = 0
-    for (const namber of arr) {
-        result = result + namber
-    }
-    console.log(result)
-}
-
-sum(1, 2, 10)
+//
+// function sum() {
+//     const arr = (Array.from(arguments))
+//     let result = 0
+//     for (const namber of arr) {
+//         result = result + namber
+//     }
+//     console.log(result)
+// }
+//
+// sum([1, 2, 10])
 // 11 - створити функцію swap(arr,index1,index2). Функція міняє місцями заняення у відаовідних індексах
 // Приклад  swap([11,22,33,44],0,1) //=> [22,11,33,44]
+function swap(arr,index1,index2) {
+    const numIndex1=arr[index1]
+    arr[index1]=arr[index2]
+    arr[index2]=numIndex1
 
-// 12 - Написати функцію обміну валюти exchange(sumUAH,currencyValues,exchangeCurrency)
+    return arr;
+}
+console.log(swap([11,22,33,44],0,1))
+
+
+// 12 - Написати функцію обміну валюти exchange(sumUAH,,exchangeCurrency)
 // Приклад exchange(10000,[{currency:'USD',value:40},{currency:'EUR',value:42}],'USD') // => 250
-//
 
+            function exchange(sum, currencyValues, exchangeCurrency) {
+                for (const cur of currencyValues) {
+                    if (cur.currency === exchangeCurrency) {
+                       return sum / cur.value
+                    }
+                }
 
+    }
+ const result= exchange(10000, [{currency: 'USD', value: 40}, {currency: 'EUR', value: 42}], 'USD')
+console.log('result: ',result)
