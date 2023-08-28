@@ -10,13 +10,13 @@
 // console.log(s)
 // 2 - створити функцію яка обчислює та повертає площу кола з радіусом r
 
-function calc(a,b,c) {
-    let result = a * b *c;
-    return result;
-}
-
-let s = calc(2, 2, 3.14)
-console.log(s)
+// function calc(a,b,c) {
+//     let result = a * b *c;
+//     return result;
+// }
+//
+// let s = calc(2, 2, 3.14)
+// console.log(s)
 
 // 3 - створити функцію яка обчислює та повертає площу циліндру висотою h, та радіутом r
 
@@ -44,26 +44,16 @@ console.log(s)
 // }
 // looper(users)
 // 5 - створити функцію яка створює параграф з текстом. Текст задати через аргумент; !!!!
-// function writ(history) {
-//     document.write(`
-//   <p> ${history} </p>
-// `);
-// }
-//
-// writ('History in Octen school')
+function writ(history) {
+    document.write(`
+  <p> ${history} </p>
+`);
+}
+
+writ('History in Octen school')
 
 // 6 - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий
 //   Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл)
-// function text(a) {
-//
-//     document.write(
-//         `<ul>
-//           <li>${a}</li
-//          </ul>
-// `)
-// }
-//
-// text('Lorem')
 
 
 // 7 - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список !!!!
@@ -115,6 +105,16 @@ console.log(s)
 
 // 10 - створити функцію sum(arr)яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад sum([1,2,10]) //->13
 
+function sum() {
+    const arr = (Array.from(arguments))
+    let result = 0
+    for (const namber of arr) {
+        result = result + namber
+    }
+    console.log(result)
+}
+
+sum(1, 2, 10)
 // 11 - створити функцію swap(arr,index1,index2). Функція міняє місцями заняення у відаовідних індексах
 // Приклад  swap([11,22,33,44],0,1) //=> [22,11,33,44]
 
