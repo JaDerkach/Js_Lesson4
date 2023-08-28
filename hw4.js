@@ -105,6 +105,7 @@ writ('History in Octen school')
 
 // 10 - створити функцію sum(arr)яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад sum([1,2,10]) //->13
 
+
 function sum() {
     const arr = (Array.from(arguments))
     let result = 0
