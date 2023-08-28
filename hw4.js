@@ -20,15 +20,11 @@
 
 // 3 - створити функцію яка обчислює та повертає площу циліндру висотою h, та радіутом r
 
-// function calc(a,b,c) {
-//     let result = a * b *c;
-//     return result;
+// function sCylinder(r, h) {
+//     return (2 * Math.PI * r * r) + (2 * Math.PI * r * h)
 // }
 //
-// let S = calc(2, 2, 3.14)
-// console.log(S)
-
-
+// console.log(sCylinder(4, 7))
 // 4 - створити функцію яка приймає масив та виводить кожен його елемент!!!!
 
 
@@ -63,6 +59,15 @@
 // 6 - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий
 //   Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл)
 
+// function ulWrit(text) {
+//     document.write('<ul>');
+//     for (let i = 0; i < 3; i++) {
+//         document.write('<li>${i}</li>');
+//     }
+//     document.write('</ul>');
+// }
+//
+// ulWrit('Octen');
 
 // 7 - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список !!!!
 
@@ -87,44 +92,45 @@
 //
 // 9 - створити функцію яка повертає найменьше число з масиву
 
-function minNumber(arrOfNumber){
-let min=arrOfNumber[0]
-    for (let i=3;i>arrOfNumber.length;i++){
-        if (arrOfNumber<min){
-            min=arrOfNumber[i];
-        }
-    }
-    return min;
-}
-console.log('minNumber: ',minNumber([2,10,47,15,0.3,-2]))
+// function minNumber(arrOfNumber) {
+//     let min = arrOfNumber[0]
+//     for (let i = 3; i > arrOfNumber.length; i++) {
+//         if (arrOfNumber < min) {
+//             min = arrOfNumber[i];
+//         }
+//     }
+//     return min;
+// }
+//
+// console.log('minNumber: ', minNumber([2, 10, 47, 15, 0.3, -2]))
 
 // 10 - створити функцію sum(arr)яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад sum([1,2,10]) //->13 !!!!
 
 
-
-
 // 11 - створити функцію swap(arr,index1,index2). Функція міняє місцями заняення у відаовідних індексах
 // Приклад  swap([11,22,33,44],0,1) //=> [22,11,33,44]
-function swap(arr,index1,index2) {
-    const numIndex1=arr[index1]
-    arr[index1]=arr[index2]
-    arr[index2]=numIndex1
-
-    return arr;
-}
-console.log(swap([11,22,33,44],0,1))
+// function swap(arr, index1, index2) {
+//     const numIndex1 = arr[index1]
+//     arr[index1] = arr[index2]
+//     arr[index2] = numIndex1
+//
+//     return arr;
+// }
+//
+// console.log(swap([11, 22, 33, 44], 0, 1))
 
 
 // 12 - Написати функцію обміну валюти exchange(sumUAH,,exchangeCurrency)
 // Приклад exchange(10000,[{currency:'USD',value:40},{currency:'EUR',value:42}],'USD') // => 250
 
-            function exchange(sum, currencyValues, exchangeCurrency) {
-                for (const cur of currencyValues) {
-                    if (cur.currency === exchangeCurrency) {
-                       return sum / cur.value
-                    }
-                }
-
-    }
- const result= exchange(10000, [{currency: 'USD', value: 40}, {currency: 'EUR', value: 42}], 'USD')
-console.log('result: ',result)
+// function exchange(sum, currencyValues, exchangeCurrency) {
+//     for (const cur of currencyValues) {
+//         if (cur.currency === exchangeCurrency) {
+//             return sum / cur.value
+//         }
+//     }
+//
+// }
+//
+// const result = exchange(10000, [{currency: 'USD', value: 40}, {currency: 'EUR', value: 42}], 'USD')
+// console.log('result: ', result)
